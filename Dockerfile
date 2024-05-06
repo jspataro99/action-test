@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="jspataro"
+FROM python:3
 
-ENTRYPOINT ["top", "-b"]
+COPY . /app
+WORKDIR /app
+CMD python test.py
